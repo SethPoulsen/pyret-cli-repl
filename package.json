@@ -16,6 +16,5 @@
   },
   "homepage": "https://github.com/SethPoulsen/pyret-cli-repl#readme",
   "dependencies": {
-    "readline": "^1.3.0"
   }
 }

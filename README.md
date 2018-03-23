@@ -1,6 +1,10 @@
 # pyret-cli-repl
-A basic command line REPL for the [Pyret](https://www.pyret.org/) programming language. 
+A basic command line REPL for the [Pyret](https://www.pyret.org/) programming language.
 
-This project is currently in the experimental phase. Once I have basic functionality down, I'll have instructions about how to get it up and running, and I'll be open to feature requests and code contributions.
+Currently only very basic functionality is working (typing a single line of code into the REPL at a time, then getting the result).
 
-Check back soon!
+To get it running:
+1. clone `pyret-cli-repl`
+2. in your `pyret-lang` repository, checkout `SethPoulsen/readline-sync` and build `phaseA`
+3. create a symlink to `pyret-lang` inside of `pyret-cli-repl`
+4. Use `phaseA` to compile or run `pyret-cli-repl/repl.arr`
