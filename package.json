@@ -1,0 +1,21 @@
+{
+  "name": "pyret-cli-repl",
+  "version": "1.0.0",
+  "description": "A command line REPL for the Pyret language",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SethPoulsen/pyret-cli-repl.git"
+  },
+  "author": "Seth Poulsen",
+  "bugs": {
+    "url": "https://github.com/SethPoulsen/pyret-cli-repl/issues"
+  },
+  "homepage": "https://github.com/SethPoulsen/pyret-cli-repl#readme",
+  "dependencies": {
+    "readline": "^1.3.0"
+  }
+}
