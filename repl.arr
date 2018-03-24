@@ -5,7 +5,8 @@ import either as E
 import file("./pyret-lang/src/arr/compiler/repl.arr") as R
 import file("./pyret-lang/src/arr/compiler/compile-structs.arr") as CS
 import file("./pyret-lang/src/arr/compiler/cli-module-loader.arr") as CLI
-import readline-sync as RL
+# import readline-sync as RL
+import js-file("./repl") as RL
 
 type Either = E.Either
 
@@ -19,6 +20,7 @@ fun get-run-answer(res):
       end
   end
 end
+
 val = lam(str): L.get-result-answer(get-run-answer(str)) end
 
 r = RT.make-runtime()
@@ -36,16 +38,13 @@ end
 fun next-interaction(src):
   i = repl.make-interaction-locator(lam(): src end)
   repl.run-interaction(i)
+  # re = L.get-result-answer(get-run-answer(result))
+  # torepr(re)
 end
 
-fun run-repl() block:
-  input = RL.prompt({prompt:">"})
-  result = next-interaction(input)
-  print(val(result))
-  print("\n")
-  run-repl()
+fun make-printable(result):
+  v = val(result)
+  torepr(v)
 end
 
-
-restart("", false)
-run-repl()
+RL.make-repl(next-interaction, make-printable)
