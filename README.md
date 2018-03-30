@@ -1,3 +1,5 @@
+**Update**: To see a better version of this checkout https://github.com/brownplt/pyret-lang/tree/cli-node-repl
+
 # pyret-cli-repl
 A basic command line REPL for the [Pyret](https://www.pyret.org/) programming language.
 
